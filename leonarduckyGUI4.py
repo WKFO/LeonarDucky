@@ -10,7 +10,7 @@
 from PyQt4 import QtCore, QtGui
 import sys, os
 from PyQt4.Qt import *
-from src import ducky_compiler
+from compiler import ducky_compiler
 
 
 commands = ["REM", "DELAY", "STRING", "GUI", "MENU", "SHIFT", "ALT", "CTRL",
@@ -267,8 +267,8 @@ class Ui_MainWindow(object):
         self.pbCSave.setText(_translate("MainWindow", "Save"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabCreator), _translate("MainWindow", "DuckyScript Creator"))
         try:
-            MainWindow.setWindowIcon(QtGui.QIcon(os.getcwd() + "/src/icon.png"))
-            self.lblPic.setPixmap(QtGui.QPixmap(os.getcwd() + "/src/main.png"))
+            MainWindow.setWindowIcon(QtGui.QIcon(os.getcwd() + "/compiler/icon.png"))
+            self.lblPic.setPixmap(QtGui.QPixmap(os.getcwd() + "/compiler/main.png"))
         except:
             pass
         self.lblSuccess.setVisible(False)
